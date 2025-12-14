@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Desk</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -148,7 +149,25 @@
           </span>
         </div>
       </div>
-      <div class="highlight"></div>
+      <div class="highlight">
+        <h2>Today's Highlight</h2>
+        <div id="chart" class="box">
+          <h4>Wind Status</h4>
+          <img src="icon/final.png" alt="" />
+          <span
+            ><h2 id="wind">7.20 Km,h</h2>
+            <p id="time">5.01 Am</p>
+          </span>
+        </div>
+        <div class="box">
+          <h2>Humidity</h2>
+          <h4 id="Humidity">84%</h4>
+          <span>
+            <i class="ph ph-drop"></i>
+          </span>
+        </div>
+        <div class="box"></div>
+      </div>
       <div class="seven-day"></div>
       <div class="time"></div>
       <div class="future-forcast"></div>

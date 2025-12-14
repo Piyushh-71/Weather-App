@@ -16,6 +16,18 @@ let tempE1 = document.querySelector("#temp");
 let locationE1 = document.querySelector("#location");
 let inputE1 = document.querySelector("#input");
 let btnE1 = document.querySelector("#btn");
+let wind = document.querySelector("#wind");
+let humidity = document.querySelector("#Humidity");
+let time = document.querySelector("#time");
+const now = new Date();
+
+let hours = now.getHours();
+const minutes = now.getMinutes();
+const ampm = hours >= 12 ? "PM" : "AM";
+
+hours = hours % 12 || 12;
+
+console.log(`${hours}:${minutes.toString().padStart(2, "0")} ${ampm}`);
 
 async function getweather(city) {
   try {
@@ -32,6 +44,9 @@ async function getweather(city) {
     console.log(real);
     locationE1.innerHTML = real.name + "  ," + real.sys.country;
     tempE1.innerHTML = real.main.temp + "°C";
+    humidity.innerHTML = real.main.humidity + "%";
+    wind.innerHTML = real.wind.speed + ", Km,h";
+    time.innerHTML = `${hours}:${minutes.toString().padStart(2, "0")} ${ampm}`;
   } catch (err) {
     console.error(err);
   }
