@@ -16,127 +16,126 @@ body {
 
 main {
   padding: 20px;
-  background-color: rgba(34, 34, 34, 0.9254901961);
-  height: 120%;
-  width: 100%;
-  color: wheat;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 4rem 13rem 1fr;
-  grid-template-rows: 1fr 3rem 1fr;
-  grid-template-areas: "menu-bar weather highlight " "menu-bar  7day Time" "menu-bar future-forcast map";
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-}
-main::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  background: radial-gradient(circle at 30% 30%, rgba(5, 86, 120, 0.801), transparent 40%), radial-gradient(circle at 70% 60%, rgba(2, 67, 47, 0.881), transparent 45%), radial-gradient(circle at 50% 90%, rgba(63, 3, 89, 0.843), transparent 50%);
-  filter: blur(60px);
-  z-index: 0;
-}
-main .menu-bar {
-  z-index: 1;
-  grid-area: menu-bar;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(32, 30, 30, 0.3960784314);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  border-radius: 15px;
-}
-main .menu-bar .icons {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  padding: 20px;
-  gap: 10px;
-  text-align: center;
-  flex-direction: column;
-}
-main .menu-bar .icons hr {
-  width: 100%;
-  border: 1px solid rgba(244, 240, 240, 0.622);
-}
-main .menu-bar .icons .top {
-  height: 40px;
-  width: 100%;
-}
-main .menu-bar .icons .top img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-}
-main .weather {
-  z-index: 1;
-  grid-area: weather;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(32, 30, 30, 0.3960784314);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  border-radius: 15px;
-}
-main .highlight {
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(32, 30, 30, 0.3960784314);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  grid-area: highlight;
-  border-radius: 15px;
-}
-main .seven-day {
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(32, 30, 30, 0.3960784314);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  border-radius: 15px;
-  grid-area: 7day;
-}
-main .time {
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(32, 30, 30, 0.3960784314);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  grid-area: Time;
-  border-radius: 15px;
-}
-main .future-forcast {
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(32, 30, 30, 0.3960784314);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  grid-area: future-forcast;
-  border-radius: 15px;
-}
-main .map {
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(32, 30, 30, 0.3960784314);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  grid-area: map;
-  border-radius: 15px;
 }
 
-@media (max-width: 1080px) {
+@media (min-width: 1024px) {
   main {
+    padding: 20px;
+    background-color: rgba(34, 34, 34, 0.9254901961);
+    height: 120%;
+    width: 100%;
+    color: wheat;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 4rem 13rem 1fr;
+    grid-template-rows: 1fr 3rem 1fr;
+    grid-template-areas: "menu-bar weather highlight " "menu-bar  7day Time" "menu-bar future-forcast map";
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  }
+  main::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(circle at 30% 30%, rgba(5, 86, 120, 0.801), transparent 40%), radial-gradient(circle at 70% 60%, rgba(2, 67, 47, 0.881), transparent 45%), radial-gradient(circle at 50% 90%, rgba(63, 3, 89, 0.843), transparent 50%);
+    filter: blur(60px);
+    z-index: 0;
+  }
+  main .menu-bar {
+    z-index: 1;
+    grid-area: menu-bar;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(32, 30, 30, 0.3960784314);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 15px;
+  }
+  main .menu-bar .icons {
+    height: 100%;
+    width: 100%;
     display: flex;
+    padding: 20px;
+    gap: 10px;
+    text-align: center;
     flex-direction: column;
+  }
+  main .menu-bar .icons hr {
+    width: 100%;
+    border: 1px solid rgba(244, 240, 240, 0.622);
+  }
+  main .menu-bar .icons .top {
+    height: 40px;
+    width: 100%;
+  }
+  main .menu-bar .icons .top img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+  main .weather {
+    z-index: 1;
+    grid-area: weather;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 30, 30, 0.3960784314);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 15px;
+  }
+  main .highlight {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(32, 30, 30, 0.3960784314);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    grid-area: highlight;
+    border-radius: 15px;
+  }
+  main .seven-day {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(32, 30, 30, 0.3960784314);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 15px;
+    grid-area: 7day;
+  }
+  main .time {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(32, 30, 30, 0.3960784314);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    grid-area: Time;
+    border-radius: 15px;
+  }
+  main .future-forcast {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(32, 30, 30, 0.3960784314);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    grid-area: future-forcast;
+    border-radius: 15px;
+  }
+  main .map {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(32, 30, 30, 0.3960784314);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    grid-area: map;
+    border-radius: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
