@@ -25,50 +25,87 @@ main {
   grid-template-columns: 4rem 13rem 1fr;
   grid-template-rows: 1fr 3rem 1fr;
   grid-template-areas: "menu-bar weather highlight " "menu-bar  7day Time" "menu-bar future-forcast map";
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
-
-.menu-bar {
+main::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 30% 30%, rgba(5, 86, 120, 0.801), transparent 40%), radial-gradient(circle at 70% 60%, rgba(2, 67, 47, 0.881), transparent 45%), radial-gradient(circle at 50% 90%, rgba(63, 3, 89, 0.843), transparent 50%);
+  filter: blur(60px);
+  z-index: 0;
+}
+main .menu-bar {
+  z-index: 1;
   grid-area: menu-bar;
-  background-color: rgba(32, 30, 30, 0.8274509804);
-  -webkit-backdrop-filter: blur(60px);
-          backdrop-filter: blur(60px);
+  height: 100%;
+  width: 100%;
+  background-color: rgba(32, 30, 30, 0.3960784314);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   border-radius: 15px;
 }
-
-.weather {
+main .weather {
+  z-index: 1;
   grid-area: weather;
   width: 100%;
   height: 100%;
-  background-color: #06eeff;
+  background-color: rgba(32, 30, 30, 0.3960784314);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   border-radius: 15px;
 }
-
-.highlight {
-  background-color: #4caf50;
+main .highlight {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(32, 30, 30, 0.3960784314);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   grid-area: highlight;
   border-radius: 15px;
 }
-
-.seven-day {
-  background-color: #ff9800;
+main .seven-day {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(32, 30, 30, 0.3960784314);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   border-radius: 15px;
   grid-area: 7day;
 }
-
-.time {
-  background-color: #9c27b0;
+main .time {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(32, 30, 30, 0.3960784314);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   grid-area: Time;
   border-radius: 15px;
 }
-
-.future-forcast {
-  background-color: #795548;
+main .future-forcast {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(32, 30, 30, 0.3960784314);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   grid-area: future-forcast;
   border-radius: 15px;
 }
-
-.map {
-  background-color: #607d8b;
+main .map {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(32, 30, 30, 0.3960784314);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   grid-area: map;
   border-radius: 15px;
 }/*# sourceMappingURL=style.css.map */
