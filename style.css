@@ -84,7 +84,7 @@ main .weather {
   flex-direction: column;
   gap: 30px;
   width: 100%;
-  height: 19rem;
+  height: 20rem;
   padding: 20px;
   background-color: rgba(68, 67, 67, 0.2235294118);
   -webkit-backdrop-filter: blur(20px);
@@ -94,7 +94,7 @@ main .weather {
 main .weather .top {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   height: 2rem;
   width: 100%;
 }
@@ -126,7 +126,7 @@ main .weather .top i:active {
 main .weather .bottom {
   height: 11.5rem;
   display: flex;
-  gap: 10px;
+  gap: 5px;
   padding: 10px;
   flex-direction: column;
 }
@@ -265,6 +265,7 @@ main .weather .bottom span i {
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none;
+    gap: 5px;
   }
   main .weather .bottom span i {
     font-size: 20px;
