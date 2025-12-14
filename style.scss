@@ -64,6 +64,29 @@ main {
     background-color: #201e1e65;
     backdrop-filter: blur(20px);
     border-radius: 15px;
+    .icons {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      padding: 20px;
+      gap: 10px;
+      text-align: center;
+      flex-direction: column;
+      hr {
+        width: 100%;
+        border: 1px solid rgba(244, 240, 240, 0.622);
+      }
+      .top {
+        height: 40px;
+        width: 100%;
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
   }
 
   .weather {
@@ -119,5 +142,11 @@ main {
     backdrop-filter: blur(20px);
     grid-area: map;
     border-radius: 15px;
+  }
+}
+@media (max-width: 1080px) {
+  main {
+    display: flex;
+    flex-direction: column;
   }
 }
