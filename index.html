@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Desk</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
     <link rel="shortcut icon" href="icon/weather-app.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="style.css" />
@@ -119,7 +124,30 @@
           </div>
         </div>
       </div>
-      <div class="weather"></div>
+      <div class="weather">
+        <div class="top">
+          <input id="input" type="text" placeholder="Search your city" />
+          <i id="btn" class="ph ph-magnifying-glass"></i>
+        </div>
+        <div class="bottom">
+          <img
+            width="94"
+            height="94"
+            src="https://img.icons8.com/3d-fluency/94/storm.png"
+            alt="storm"
+          />
+          <h6 id="temp">28°C</h6>
+          <span>
+            <i class="ph ph-cloud-rain"></i>
+            <p>Rainly Storm Clouds</p></span
+          >
+          <hr />
+          <span>
+            <i class="ph ph-map-pin"></i>
+            <p id="location">Pune,In</p>
+          </span>
+        </div>
+      </div>
       <div class="highlight"></div>
       <div class="seven-day"></div>
       <div class="time"></div>

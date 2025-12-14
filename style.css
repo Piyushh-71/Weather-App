@@ -19,7 +19,7 @@ main {
   height: 100%;
   width: 100%;
   padding: 20px;
-  color: wheat;
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -76,6 +76,75 @@ main .menu-bar .icons .top img {
 }
 main .menu-bar .icons hr {
   display: none;
+}
+main .weather {
+  z-index: 1;
+  grid-area: weather;
+  width: 100%;
+  height: 15.5rem;
+  padding: 20px;
+  background-color: rgba(68, 67, 67, 0.2235294118);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 15px;
+}
+main .weather .top {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 2rem;
+  width: 100%;
+}
+main .weather .top input {
+  height: 35px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(11, 11, 11, 0.4509803922);
+  color: black;
+  border: none;
+}
+main .weather .top i {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  color: rgba(222, 222, 222, 0.8862745098);
+  padding: 5px 6px;
+  background-color: #000000;
+  border-radius: 50px;
+  font-size: 20px;
+  margin-left: -70px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+main .weather .top i:active {
+  transform: scale(0.9);
+}
+main .weather .bottom {
+  height: 11.5rem;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+main .weather .bottom img {
+  height: 130px;
+  width: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .weather .bottom h6 {
+  font-size: 35px;
+  color: rgba(247, 247, 247, 0.7058823529);
+}
+main .weather .bottom span {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main .weather .bottom span i {
+  font-size: 30px;
+  color: #ffffff;
 }
 
 @media (min-width: 1024px) {
@@ -166,6 +235,38 @@ main .menu-bar .icons hr {
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
     border-radius: 15px;
+  }
+  main .weather .top {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    padding: 10px;
+    gap: 5px;
+    height: 20%;
+    width: 100%;
+  }
+  main .weather .top input {
+    height: 35px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(11, 11, 11, 0.4509803922);
+    color: black;
+    border: none;
+  }
+  main .weather .top i {
+    margin-left: -45px;
+  }
+  main .weather .bottom {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  main .weather .bottom span i {
+    font-size: 20px;
+  }
+  main .weather .bottom span p {
+    font-size: 15px;
   }
   main .highlight {
     z-index: 1;
