@@ -324,8 +324,8 @@ main .highlight .outer .box img {
   main .weather .top input {
     height: 35px;
     width: 100%;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 5px 15px;
+    border-radius: 50px;
     background-color: rgba(11, 11, 11, 0.4509803922);
     color: black;
     border: none;
@@ -366,6 +366,7 @@ main .highlight .outer .box img {
     color: white;
   }
   main .highlight .outer {
+    cursor: pointer;
     margin-top: 25px;
     gap: 5px;
     color: white;
@@ -425,45 +426,5 @@ main .highlight .outer .box img {
   }
   main .highlight .outer .inner2 span p {
     font-size: 17px;
-  }
-  main .seven-day {
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(32, 30, 30, 0.3960784314);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-    border-radius: 15px;
-    grid-area: 7day;
-  }
-  main .time {
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(32, 30, 30, 0.3960784314);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-    grid-area: Time;
-    border-radius: 15px;
-  }
-  main .future-forcast {
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(32, 30, 30, 0.3960784314);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-    grid-area: future-forcast;
-    border-radius: 15px;
-  }
-  main .map {
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(32, 30, 30, 0.3960784314);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-    grid-area: map;
-    border-radius: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
