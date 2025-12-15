@@ -156,7 +156,6 @@ main .weather .bottom span i {
 main .highlight {
   padding: 20px;
   z-index: 1;
-  height: 40rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -167,20 +166,32 @@ main .highlight {
   grid-area: highlight;
   border-radius: 15px;
 }
-main .highlight h2 {
+main .highlight .outer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .highlight .outer h2 {
   font-size: 35px;
   color: rgba(230, 228, 228, 0.5333333333);
 }
-main .highlight .box {
+main .highlight .outer .box {
   border-radius: 10px;
   padding: 10px;
   background-color: rgba(38, 34, 34, 0.6274509804);
 }
-main .highlight .box h4 {
-  font-size: 20px;
+main .highlight .outer .box h3 {
+  font-size: 25px;
+}
+main .highlight .outer .box #Humidity {
+  font-size: 40px;
+  color: #c2bdbd;
+}
+main .highlight .outer .box h4 {
+  font-size: 25px;
   margin: 20px 0;
 }
-main .highlight .box span {
+main .highlight .outer .box span {
   width: 100%;
   height: 50px;
   align-items: center;
@@ -188,11 +199,11 @@ main .highlight .box span {
   display: flex;
   gap: 10px;
 }
-main .highlight .box span p {
+main .highlight .outer .box span p {
   font-size: 20px;
   color: rgba(247, 247, 247, 0.5725490196);
 }
-main .highlight .box img {
+main .highlight .outer .box img {
   width: 100%;
   height: 190px;
   -o-object-fit: cover;
@@ -325,6 +336,7 @@ main .highlight .box img {
     z-index: 1;
     height: 100%;
     width: 100%;
+    gap: 10px;
     display: flex;
     flex-direction: row;
     background-color: rgba(32, 30, 30, 0.3960784314);
@@ -332,13 +344,59 @@ main .highlight .box img {
             backdrop-filter: blur(20px);
     grid-area: highlight;
     border-radius: 15px;
+    padding: 10px;
   }
-  main .highlight h2 {
+  main .highlight > h2 {
     position: absolute;
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+  }
+  main .highlight .outer {
+    margin-top: 25px;
+    gap: 5px;
+    color: white;
+    width: 13rem;
+  }
+  main .highlight .outer .inner1 {
+    padding: 20px;
+    height: 200px;
+  }
+  main .highlight .outer .inner1 span {
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20px;
+  }
+  main .highlight .outer .inner1 span h2 {
+    font-size: 15px;
+  }
+  main .highlight .outer .inner1 span p {
+    font-size: 12px;
+  }
+  main .highlight .outer .inner1 h4 {
+    font-size: 20px;
+    margin: 0;
+  }
+  main .highlight .outer .inner1 img {
+    width: 100%;
+    height: 130px;
+  }
+  main .highlight .outer .inner2 {
+    height: 125px;
+  }
+  main .highlight .outer .inner2 #Humidity {
+    display: inline-block;
     font-size: 25px;
   }
-  main .highlight .box {
-    margin-top: 30px;
+  main .highlight .outer .inner2 h4 {
+    font-size: 20px;
+    display: inline-block;
+    text-transform: capitalize;
+    color: rgba(193, 192, 192, 0.862745098);
+  }
+  main .highlight .outer .inner2 span p {
+    font-size: 17px;
   }
   main .seven-day {
     z-index: 1;

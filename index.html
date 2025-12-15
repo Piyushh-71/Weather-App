@@ -140,7 +140,7 @@
           <h6 id="temp">28°C</h6>
           <span>
             <i class="ph ph-cloud-rain"></i>
-            <p>Rainly Storm Clouds</p></span
+            <p id="p">Rainly Storm Clouds</p></span
           >
           <hr />
           <span>
@@ -151,22 +151,57 @@
       </div>
       <div class="highlight">
         <h2>Today's Highlight</h2>
-        <div id="chart" class="box">
-          <h4>Wind Status</h4>
-          <img src="icon/final.png" alt="" />
-          <span
-            ><h2 id="wind">7.20 Km,h</h2>
-            <p id="time">5.01 Am</p>
-          </span>
+        <div class="outer">
+          <div id="chart" class="box inner1">
+            <h4>Wind Status</h4>
+            <img src="icon/final.png" alt="" />
+            <span
+              ><h2 id="wind">7.20 Km,h</h2>
+              <p id="time">5.01 Am</p>
+            </span>
+          </div>
+          <div class="box inner2">
+            <h4>Humidity &nbsp;</h4>
+            <h4 id="Humidity">84%</h4>
+            <span>
+              <i class="ph ph-drop"></i>
+              <p id="dew">The dew point is 2.1° right now</p>
+            </span>
+          </div>
         </div>
-        <div class="box">
-          <h2>Humidity</h2>
-          <h4 id="Humidity">84%</h4>
-          <span>
-            <i class="ph ph-drop"></i>
-          </span>
+        <div class="outer">
+          <div id="chart" class="box inner1">
+            <h4>UV index</h4>
+            <img src="icon/final2.png" alt="" />
+            <span><h2 id="Vw">0.0 Vw</h2> </span>
+          </div>
+          <div class="box inner2">
+            <h4>Visiblity &nbsp;</h4>
+            <h4 id="Visiblity">03km</h4>
+            <span>
+              <i class="ph ph-eye"></i>
+              <p id="status"></p>
+            </span>
+          </div>
         </div>
-        <div class="box"></div>
+        <div class="outer">
+          <div id="chart" class="box inner1">
+            <h4>Sunrise & Sunset</h4>
+            <img src="icon/final3.png" alt="" />
+            <span
+              ><h3 id="sunrise">00:00 AM</h3>
+              <h3 id="sunset">00:00 PM</h3>
+            </span>
+          </div>
+          <div class="box inner2">
+            <h4>Feels like &nbsp;</h4>
+            <h4 id="Feels">42°</h4>
+            <span>
+              <i class="ph ph-thermometer-simple"></i>
+              <p id="hoter">Humiditiy is making it feel hotter.</p>
+            </span>
+          </div>
+        </div>
       </div>
       <div class="seven-day"></div>
       <div class="time"></div>

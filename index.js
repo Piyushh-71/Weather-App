@@ -1,17 +1,3 @@
-// // function debounce(fn, delay) {
-// //   let timer;
-// //   return function () {
-// //     clearTimeout(timer);
-// //     timer = setTimeout(fn, delay);
-// //   };
-// // }
-// // document.querySelector("input").addEventListener(
-// //   "input",
-// //   debounce(function () {
-// //     console.log("chalegaa");
-// //   }, 400)
-// // );
-
 let tempE1 = document.querySelector("#temp");
 let locationE1 = document.querySelector("#location");
 let inputE1 = document.querySelector("#input");
@@ -19,15 +5,19 @@ let btnE1 = document.querySelector("#btn");
 let wind = document.querySelector("#wind");
 let humidity = document.querySelector("#Humidity");
 let time = document.querySelector("#time");
-const now = new Date();
+let Vw = document.querySelector("#Vw");
+let Visiblity = document.querySelector("#Visiblity");
+let status = document.querySelector("#status");
+let p = document.querySelector("#p");
+let sunrise = document.querySelector("#sunrise");
+let sunset = document.querySelector("#sunset");
+let Feels = document.querySelector("#Feels");
 
+const now = new Date();
 let hours = now.getHours();
 const minutes = now.getMinutes();
 const ampm = hours >= 12 ? "PM" : "AM";
-
 hours = hours % 12 || 12;
-
-console.log(`${hours}:${minutes.toString().padStart(2, "0")} ${ampm}`);
 
 async function getweather(city) {
   try {
@@ -47,6 +37,45 @@ async function getweather(city) {
     humidity.innerHTML = real.main.humidity + "%";
     wind.innerHTML = real.wind.speed + ", Km,h";
     time.innerHTML = `${hours}:${minutes.toString().padStart(2, "0")} ${ampm}`;
+    console.log(real);
+    Feels.innerHTML = real.main.feels_like;
+
+    function formatTime(unixTime) {
+      return new Date(unixTime * 1000).toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    }
+    const sunrisee = formatTime(real.sys.sunrise);
+    const sunsete = formatTime(real.sys.sunset);
+    sunrise.innerHTML = sunrisee;
+    sunset.innerHTML = sunsete;
+    Vw.innerHTML = real.wind.gust + " Vw";
+    const vis = (real.visibility / 1000).toFixed(0);
+    console.log(vis + " km");
+    let statuse =
+      vis >= 9000
+        ? "Clear🌤️"
+        : vis >= 5000
+        ? "Hazy🌫️"
+        : vis >= 2000
+        ? "Misty🌁"
+        : "Foggy🌫️";
+
+    Visiblity.innerHTML = vis + "km";
+    status.innerHTML = statuse;
+    console.log(statuse);
+    function tempCondition(temp) {
+      if (temp <= 0) return "Freezing❄️";
+      if (temp <= 10) return "Very Cold 🥶";
+      if (temp <= 18) return "Cold 🌬️";
+      if (temp <= 25) return "Pleasant 😌";
+      if (temp <= 32) return "Warm 🌤️";
+      if (temp <= 38) return "Hot 🔥";
+      return "Extreme Heat 🥵";
+    }
+    let cond = tempCondition(real.main.temp);
+    p.innerHTML = cond;
   } catch (err) {
     console.error(err);
   }
@@ -54,9 +83,8 @@ async function getweather(city) {
 function Enter() {
   const value = input.value.trim();
   if (value === "") {
-    alert("Type something first 👀");
+    alert("Type something first" + value);
   } else {
-    console.log("Searching for:", value);
     getweather(value);
     inputE1.value = "";
   }
