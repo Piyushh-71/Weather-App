@@ -21,7 +21,7 @@ body {
 main {
   background-color: rgba(34, 34, 34, 0.9254901961);
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -57,11 +57,20 @@ main .menu-bar .icons {
   flex-direction: row;
   align-items: center;
 }
-main .menu-bar .icons .icon {
+main .menu-bar .icons span {
+  gap: 5px;
+  text-align: center;
+  font-size: 30px;
+  padding: 2px;
+  border-radius: 50px;
+}
+main .menu-bar .icons span .icon {
+  background-color: #383737;
   transition: all 0.4s linear;
 }
-main .menu-bar .icons .icon:active {
+main .menu-bar .icons span .icon:active {
   scale: 0.9;
+  color: #000;
 }
 main .menu-bar .icons .top {
   display: flex;
@@ -105,7 +114,7 @@ main .weather .top input {
   height: 35px;
   width: 100%;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 40px;
   background-color: rgba(11, 11, 11, 0.4509803922);
   color: black;
   border: none;
@@ -117,9 +126,9 @@ main .weather .top i {
   color: rgba(222, 222, 222, 0.8862745098);
   padding: 5px 6px;
   background-color: #000000;
-  border-radius: 50px;
+  border-radius: 50%;
   font-size: 20px;
-  margin-left: -70px;
+  margin-left: -45px;
   transition: all 0.3s linear;
   cursor: pointer;
 }
@@ -253,7 +262,11 @@ main .highlight .outer .box img {
     width: 100%;
     height: 100%;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+  }
+  main .menu-bar .icons i {
+    font-size: 35px;
+    color: #c0bebe;
   }
   main .menu-bar .icons hr {
     display: block;
@@ -283,10 +296,10 @@ main .highlight .outer .box img {
     transition: all 0.4s linear;
   }
   main .menu-bar .icons .icon:hover {
-    background-color: rgba(111, 109, 109, 0.4274509804);
+    background-color: rgba(20, 19, 19, 0.8666666667);
   }
   main .menu-bar .icons .icon:active {
-    background-color: rgba(111, 109, 109, 0.4274509804);
+    background-color: rgba(3, 3, 3, 0.4274509804);
     scale: 0.9;
   }
   main .weather {
@@ -318,7 +331,7 @@ main .highlight .outer .box img {
     border: none;
   }
   main .weather .top i {
-    margin-left: -45px;
+    margin-left: -40px;
   }
   main .weather .bottom {
     -webkit-user-select: none;
@@ -361,6 +374,21 @@ main .highlight .outer .box img {
   main .highlight .outer .inner1 {
     padding: 20px;
     height: 200px;
+  }
+  main .highlight .outer .inner1 h3 {
+    color: #c2bdbd;
+  }
+  main .highlight .outer .inner1 .sunrise {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 26%;
+  }
+  main .highlight .outer .inner1 .sunset {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 6%;
   }
   main .highlight .outer .inner1 span {
     padding: 0;
