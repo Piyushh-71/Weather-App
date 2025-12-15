@@ -40,10 +40,11 @@ async function getweather(city) {
     console.log(real);
     Feels.innerHTML = real.main.feels_like;
 
-    function formatTime(unixTime) {
-      return new Date(unixTime * 1000).toLocaleTimeString([], {
+    function formatTime(unix) {
+      return new Date(unix * 1000).toLocaleTimeString("en-IN", {
         hour: "2-digit",
         minute: "2-digit",
+        hour12: true, // 🔥 force AM/PM
       });
     }
     const sunrisee = formatTime(real.sys.sunrise);
