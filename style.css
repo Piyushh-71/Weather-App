@@ -118,6 +118,7 @@ main .weather .top input {
   background-color: rgba(11, 11, 11, 0.4509803922);
   color: black;
   border: none;
+  outline: none;
 }
 main .weather .top i {
   display: inline-block;
@@ -223,7 +224,7 @@ main .highlight .outer .box img {
   main {
     padding: 20px;
     background-color: rgba(34, 34, 34, 0.9254901961);
-    height: 120%;
+    max-height: 110%;
     width: 100%;
     color: wheat;
     display: grid;
@@ -281,7 +282,7 @@ main .highlight .outer .box img {
     justify-content: center;
     margin-top: 15px;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
   }
   main .menu-bar .icons .bottom {
     width: 100%;
@@ -346,6 +347,9 @@ main .highlight .outer .box img {
     font-size: 15px;
   }
   main .highlight {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
     z-index: 1;
     height: 100%;
     width: 100%;
